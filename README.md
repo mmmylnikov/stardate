@@ -1,7 +1,7 @@
 # Stardate 🎉 
 
 [![CI](https://github.com/mmmylnikov/stardate/actions/workflows/ci.yml/badge.svg)](https://github.com/mmmylnikov/stardate/actions/workflows/ci.yml)
-[![pages-build-deployment](https://github.com/mmmylnikov/stardate/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/mmmylnikov/stardate/actions/workflows/pages/pages-build-deployment)
+[![pages-build-deployment](https://github.com/mmmylnikov/stardate/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/mmmylnikov/stardate/actions/workflows/pages/pages-build-deployment)
 
 Welcome to Stardate, a fun and simple way to celebrate the “birthdays” of your favorite GitHub repositories! This project brings together the creation dates of popular repos and presents them in an easy-to-explore format for anyone curious about the stories behind the code.
 
