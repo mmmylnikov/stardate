@@ -1,0 +1,158 @@
+body {
+  font-family: 'Fira Code', monospace;
+  padding: 1rem;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.card, .modal-content {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.navbar {
+   background-color: rgba(18, 18, 18, 0.5);
+   backdrop-filter: blur(5px); 
+   -webkit-backdrop-filter: blur(5px); 
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 8px;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: 260px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+  text-align: center;
+  gap: 4px;
+  justify-content: center;
+}
+
+.repo-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.repo-name {
+  font-weight: 600;
+  word-break: break-word;
+  max-height: 3.6em;
+  line-height: 1.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.repo-date, .repo-category, .repo-language, .repo-age {
+  white-space: nowrap;
+}
+
+.repo-date {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.repo-category {
+  font-size: 0.7rem;
+  color: #999;
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.repo-language {
+  font-size: 0.7rem;
+  color: #198754;
+  opacity: 0.8;
+}
+
+.repo-age {
+  font-size: 0.9rem;
+  margin-top: 4px;
+  color: #888;
+}
+
+.age-jubilee {
+  font-weight: 700;
+  color: #ffcc00; 
+  text-shadow: 0 0 3px #ffcc00;
+}
+
+.repo-topics {
+  margin-top: 6px;
+}
+
+.topic-chip, .chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.8rem;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  user-select: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  margin-right: 6px;
+}
+
+.chip {
+  border: 1px solid #0d6efd;
+  color: #0d6efd;
+}
+
+.chip.selected {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.lang-chip {
+  border-color: #198754;
+  color: #198754;
+}
+
+.lang-chip.selected {
+  background-color: #198754;
+}
+
+.topic-chip {
+  border: 1px solid #6610f2;
+  color: #6610f2;
+}
+
+.topic-chip.selected {
+  background-color: #6610f2;
+  color: white;
+}
+
+.repo-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.section-title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+#searchInput {
+  background-color: #212529 !important;
+  color: #f8f9fa !important;
+  border-color: #495057 !important;
+}
+
+#searchInput::placeholder {
+  color: #adb5bd !important;
+}

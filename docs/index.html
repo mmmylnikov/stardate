@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>stardate 🎉 - GitHub Repo Birthdays</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav class="navbar border-bottom border-body sticky-top " data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <h1>stardate 🎉 <small>GitHub Repo Birthdays</small></h1>
+
+            </a>
+            <form class="d-flex" role="search">
+                <input id="searchInput" type="search" placeholder="Search by repo name..." class="form-control me-2 " />
+                <button class="btn btn-outline-secondary p-2" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasFilters" aria-controls="offcanvasFilters"
+                    style="background: transparent;">
+                    <i class="bi bi-funnel-fill fs-0"></i>
+                </button>
+            </form>
+
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+
+        <div class="offcanvas offcanvas-end bg-dark text-light" tabindex="-1" id="offcanvasFilters"
+            aria-labelledby="offcanvasFiltersLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasFiltersLabel">Filters</h5>
+                <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div id="categoriesDiv" class="d-flex flex-wrap gap-2 align-items-center mb-3"></div>
+                <div id="languagesDiv" class="d-flex flex-wrap gap-2 align-items-center mb-3"></div>
+                <!-- <div id="topicsDiv" class="d-flex flex-wrap gap-2 align-items-center"></div> -->
+            </div>
+        </div>
+
+        <div id="todaySection">
+            <div class="section-title">Repositories Born Today</div>
+            <div id="todayList" class="repo-list"></div>
+        </div>
+
+        <div id="weekSection">
+            <div class="section-title">Repositories Born This Week</div>
+            <div id="weekList" class="repo-list"></div>
+        </div>
+
+        <div id="monthSection">
+            <div class="section-title">Repositories Born This Month</div>
+            <div id="monthList" class="repo-list"></div>
+        </div>
+
+        <div id="nearFutureSection" style="display:none;">
+            <div class="section-title">In the near future</div>
+            <div id="nearFutureList" class="repo-list"></div>
+        </div>
+    </div>
+
+    <footer class="bg-transparent text-muted py-4 mt-5 border-top border-secondary-subtle text-center small">
+        <p class="mb-0 text-muted" style="line-height: 1.5;">
+            <span id="currentYear"></span> - Welcome to the Stardate Project —<a
+                href="https://github.com/your-project-repo" target="_blank" class="text-decoration-none ms-2"
+                aria-label="GitHub Repository">come our GitHub repository</a>. This project celebrates GitHub Repo
+            Birthdays.
+            We sincerely thank the amazing authors of the libraries, frameworks, and tools we rely on, as well as the
+            creators of the inspiring
+            <a href="https://github.com/dylanhogg/awesome-python" target="_blank" class="text-decoration-none">Awesome
+                Python collection</a> that made this project possible.
+            We proudly use the
+            <a href="https://getbootstrap.com" target="_blank" class="text-decoration-none">Bootstrap Theme</a> and
+            <a href="https://fonts.google.com/specimen/Fira+Code" target="_blank" class="text-decoration-none">Fira Code
+                Font</a>.
+            Made with <span style="color:#e25555;">❤</span> by and for the community.
+        </p>
+    </footer>
+
+
+
+    <div class="modal fade" id="repoModal" tabindex="-1" aria-labelledby="repoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="repoModalLabel">Repository Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
